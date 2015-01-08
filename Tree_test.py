@@ -31,5 +31,13 @@ class Tree_test(unittest.TestCase):
       tree.add(value)
     self.assertEqual(tree.search(3).getValue(),3)
     self.assertEqual(tree.search(13).getValue(),13)
+  def test_3_level_of_children_tree(self):
+    tree = Tree(10)
+    for value in [5,3,7,15,13,17,1,4,6,8,11,14,16,19]:
+      tree.add(value)
+    self.assertEqual(tree.search(10).getValue(),10)
+    self.assertEqual(tree.search(13).getValue(),13)
+    self.assertEqual(tree.search(1).getValue(),1)
+    self.assertEqual(tree.search(1).getValue(),1)
 
 
