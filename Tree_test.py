@@ -11,7 +11,7 @@ class Tree_test(unittest.TestCase):
     tree = Tree(1)
     tree.add(2)
     self.assertEqual(tree.search(2).getValue(),2)
-  def test_add_first_child(self):
+  def test_add_second_child(self):
     tree = Tree(2)
     tree.add(1)
     tree.add(3)
