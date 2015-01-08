@@ -14,9 +14,15 @@ class Tree:
       else:
         self.right = Tree(value)
     else:
-      self.left = Tree(value)
+      if self.left:
+        self.left.add(value)
+      else:
+        self.left = Tree(value)
   def search(self,value):
     if value > self.value:
       return self.right
-    else:
+    elif value < self.value:
       return self.left
+    else:
+      return self
+

@@ -22,3 +22,8 @@ class Tree_test(unittest.TestCase):
     tree.add(3)
     tree.add(4)
     self.assertEqual(tree.search(3).getValue(),3)
+  def test_add_two_left_child(self):
+    tree = Tree(5)
+    tree.add(1)
+    tree.add(3)
+    self.assertEqual(tree.search(1).getValue(),1)
