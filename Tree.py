@@ -9,7 +9,10 @@ class Tree:
     return self.value
   def add(self,value):
     if value > self.value:
-      self.right = Tree(value)
+      if self.right:
+        self.right.add(value)
+      else:
+        self.right = Tree(value)
     else:
       self.left = Tree(value)
   def search(self,value):
