@@ -39,5 +39,10 @@ class Tree_test(unittest.TestCase):
     self.assertEqual(tree.search(13).getValue(),13)
     self.assertEqual(tree.search(1).getValue(),1)
     self.assertEqual(tree.search(7).getValue(),7)
+  def test_balanced(self):
+    tree = Tree(10)
+    for value in [5,3,7,15,13,17,]:
+      tree.add(value)
+    self.assertFalse(tree.is_balanced())
 
 

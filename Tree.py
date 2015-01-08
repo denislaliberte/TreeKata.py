@@ -30,3 +30,6 @@ class Tree:
     else:
       return self
 
+  def is_balanced(self):
+    return False
+
