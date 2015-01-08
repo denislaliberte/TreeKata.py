@@ -3,10 +3,13 @@ class Tree:
   value = False
   left = False
   right = False
+
   def __init__(self,value):
     self.value = value
+
   def getValue(self):
     return self.value
+
   def add(self,value):
     if value > self.value:
       if self.right:
@@ -18,6 +21,7 @@ class Tree:
         self.left.add(value)
       else:
         self.left = Tree(value)
+
   def search(self,value):
     if value > self.value:
       return self.right
