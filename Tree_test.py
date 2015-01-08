@@ -38,6 +38,6 @@ class Tree_test(unittest.TestCase):
     self.assertEqual(tree.search(10).getValue(),10)
     self.assertEqual(tree.search(13).getValue(),13)
     self.assertEqual(tree.search(1).getValue(),1)
-    self.assertEqual(tree.search(1).getValue(),1)
+    self.assertEqual(tree.search(7).getValue(),7)
 
 
