@@ -25,3 +25,11 @@ class Tree_test(unittest.TestCase):
     tree.add(1)
     tree.add(3)
     self.assertEqual(tree.search(1).getValue(),1)
+  def test_2_level_of_children_tree(self):
+    tree = Tree(10)
+    for value in [5,3,7,15,13,17]:
+      tree.add(value)
+    self.assertEqual(tree.search(3).getValue(),3)
+    self.assertEqual(tree.search(13).getValue(),13)
+
+

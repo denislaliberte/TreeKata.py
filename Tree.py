@@ -24,9 +24,9 @@ class Tree:
 
   def search(self,value):
     if value > self.value:
-      return self.right
+      return self.right.search(value)
     elif value < self.value:
-      return self.left
+      return self.left.search(value)
     else:
       return self
 
