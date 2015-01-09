@@ -30,6 +30,9 @@ class Tree:
     else:
       return self
 
-  def is_balanced(self):
-    return False
+#  def is_balanced(self):
+#    return False
+  def heightCount(self):
+    return 2
+
 
