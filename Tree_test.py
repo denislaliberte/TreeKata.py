@@ -39,27 +39,33 @@ class Tree_test(unittest.TestCase):
     self.assertEqual(tree.search(13).getValue(),13)
     self.assertEqual(tree.search(1).getValue(),1)
     self.assertEqual(tree.search(7).getValue(),7)
-#pending
-##  def test_balanced(self):
-##    tree = Tree(10)
-##    for value in [5,15,13,17,11]:
-##      tree.add(value)
-##    self.assertFalse(tree.is_balanced())
-##  def test_balanced(self):
-##    tree = Tree(10)
-##    for value in [5,3,7,15,13]:
-##      tree.add(value)
-##    self.assertTrue(tree.is_balanced())
-##
-  def get_greater_height(self):
+
+  def test_get_one_level_height(self):
     tree = Tree(10)
-    for value in [5,3,7]:
+    self.assertEqual(tree.heightCount(),1)
+
+  def pending_get_left_height(self):
+    tree = Tree(10)
+    for value in [5]:
       tree.add(value)
     self.assetEqual(tree.heightCount(),2)
 
-  def get_one_level_height(self):
+  def pending_get_left_height(self):
     tree = Tree(10)
-    self.assetEqual(tree.heightCount(),1)
+    for value in [11]:
+      tree.add(value)
+    self.assetEqual(tree.heightCount(),2)
+  def pending_balanced(self):
+    tree = Tree(10)
+    for value in [5,15,13,17,11]:
+      tree.add(value)
+    self.assertFalse(tree.is_balanced())
+  def pending_balanced(self):
+    tree = Tree(10)
+    for value in [5,3,7,15,13]:
+      tree.add(value)
+    self.assertTrue(tree.is_balanced())
+
 
     
 
