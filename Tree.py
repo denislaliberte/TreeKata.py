@@ -1,8 +1,8 @@
 
 class Tree:
   value = None
-  left = None
-  right = None
+  left = False
+  right = False
 
   def __init__(self,value):
     self.value = value
@@ -44,5 +44,6 @@ class Tree:
   def is_balanced(self):
     leftHeight = (self.left and self.left.heightCount()) or 0
     rightHeight = (self.right and self.right.heightCount()) or 0
-    return ( abs(leftHeight - rightHeight) <= 1)
+    leftBalanced = self.left.is_balanced() if self.left else True
+    return (( abs(leftHeight - rightHeight) <= 1) and leftBalanced)
 

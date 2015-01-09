@@ -73,3 +73,7 @@ class Tree_test(unittest.TestCase):
     tree.addMultiple([5,15])
     self.assertTrue(tree.is_balanced())
 
+  def test_balanced_sub_tree(self):
+    tree = Tree(10)
+    tree.addMultiple([5,4,3,2,15,16,13,17])
+    self.assertFalse(tree.is_balanced())
