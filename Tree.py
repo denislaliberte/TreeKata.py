@@ -45,5 +45,6 @@ class Tree:
     leftHeight = (self.left and self.left.heightCount()) or 0
     rightHeight = (self.right and self.right.heightCount()) or 0
     leftBalanced = self.left.is_balanced() if self.left else True
-    return (( abs(leftHeight - rightHeight) <= 1) and leftBalanced)
+    rightBalanced = self.right.is_balanced() if self.right else True
+    return (( abs(leftHeight - rightHeight) <= 1) and leftBalanced and rightBalanced)
 
