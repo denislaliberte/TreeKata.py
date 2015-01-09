@@ -22,7 +22,6 @@ class Tree:
       else:
         self.left = Tree(value)
 
-## todo not found case
   def search(self,value):
     if value ==self.value:
       return self
