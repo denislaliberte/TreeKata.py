@@ -22,6 +22,10 @@ class Tree:
       else:
         self.left = Tree(value)
 
+  def addMultiple(self,values):
+    for value in values:
+      self.add(value)
+
   def search(self,value):
     if value == self.value:
       return self

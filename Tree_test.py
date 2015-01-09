@@ -11,7 +11,6 @@ class Tree_test(unittest.TestCase):
     tree = Tree(1)
     self.assertEqual(tree.search(2),None)
 
-
   def test_add_first_child(self):
     tree = Tree(1)
     tree.add(2)
@@ -38,8 +37,9 @@ class Tree_test(unittest.TestCase):
 
   def test_2_level_of_children_tree(self):
     tree = Tree(10)
-    for value in [5,3,7,15,13,17]:
-      tree.add(value)
+    tree.addMultiple([5,3,7,15,13,17])
+    #for value in [5,3,7,15,13,17]:
+    #  tree.add(value)
     self.assertEqual(tree.search(3).getValue(),3)
     self.assertEqual(tree.search(13).getValue(),13)
 
