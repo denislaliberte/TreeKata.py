@@ -33,9 +33,17 @@ class Tree:
 #  def is_balanced(self):
 #    return False
   def heightCount(self):
+    leftHeight =0
+    rightHeight =0
     if self.left:
-      return 1 + self.left.heightCount()
+      leftHeight = self.left.heightCount()
+    if self.right:
+      rightHeight = self.right.heightCount()
+    if leftHeight > rightHeight:
+      return leftHeight + 1
     else:
-      return 1
+      return rightHeight + 1
+
+
 
 

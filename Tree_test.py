@@ -50,11 +50,11 @@ class Tree_test(unittest.TestCase):
       tree.add(value)
     self.assertEqual(tree.heightCount(),2)
 
-  def pending_get_left_height(self):
+  def test_get_right_height(self):
     tree = Tree(10)
-    for value in [11]:
+    for value in [11,13]:
       tree.add(value)
-    self.assetEqual(tree.heightCount(),2)
+    self.assertEqual(tree.heightCount(),3)
   def pending_balanced(self):
     tree = Tree(10)
     for value in [5,15,13,17,11]:
