@@ -40,6 +40,5 @@ class Tree:
   def is_balanced(self):
     leftHeight = (self.left and self.left.heightCount()) or 0
     rightHeight = (self.right and self.right.heightCount()) or 0
-    diff = abs(leftHeight - rightHeight)
-    return diff <= 1
+    return ( abs(leftHeight - rightHeight) <= 1)
 
