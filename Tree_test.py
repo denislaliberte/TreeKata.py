@@ -57,4 +57,10 @@ class Tree_test(unittest.TestCase):
       tree.add(value)
     self.assetEqual(tree.heightCount(),2)
 
+  def get_one_level_height(self):
+    tree = Tree(10)
+    self.assetEqual(tree.heightCount(),1)
+
+    
+
 
