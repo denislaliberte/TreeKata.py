@@ -23,7 +23,7 @@ class Tree:
         self.left = Tree(value)
 
   def search(self,value):
-    if value ==self.value:
+    if value == self.value:
       return self
     elif value > self.value and self.right:
       return self.right.search(value)
@@ -33,12 +33,8 @@ class Tree:
       return None
 
   def heightCount(self):
-    leftHeight =0
-    rightHeight =0
-    if self.left:
-      leftHeight = self.left.heightCount()
-    if self.right:
-      rightHeight = self.right.heightCount()
+    leftHeight = (self.left and self.left.heightCount()) or 0
+    rightHeight = (self.right and self.right.heightCount()) or 0
     if leftHeight > rightHeight:
       return leftHeight + 1
     else:
