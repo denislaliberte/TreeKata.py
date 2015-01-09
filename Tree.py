@@ -1,8 +1,8 @@
 
 class Tree:
-  value = False
-  left = False
-  right = False
+  value = None
+  left = None
+  right = None
 
   def __init__(self,value):
     self.value = value
@@ -24,12 +24,14 @@ class Tree:
 
 ## todo not found case
   def search(self,value):
-    if value > self.value:
+    if value ==self.value:
+      return self
+    elif value > self.value and self.right:
       return self.right.search(value)
-    elif value < self.value:
+    elif value < self.value and self.left:
       return self.left.search(value)
     else:
-      return self
+      return None
 
   def heightCount(self):
     leftHeight =0

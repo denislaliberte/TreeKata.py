@@ -7,6 +7,11 @@ class Tree_test(unittest.TestCase):
     tree = Tree(1)
     self.assertEqual(tree.getValue(),1)
 
+  def test_not_found(self):
+    tree = Tree(1)
+    self.assertEqual(tree.search(2),None)
+
+
   def test_add_first_child(self):
     tree = Tree(1)
     tree.add(2)
