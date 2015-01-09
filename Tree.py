@@ -37,9 +37,9 @@ class Tree:
       return None
 
   def heightCount(self):
-    leftHeight = (self.left and self.left.heightCount()) or 0
-    rightHeight = (self.right and self.right.heightCount()) or 0
-    return (leftHeight > rightHeight and leftHeight + 1) or rightHeight + 1
+    leftHeight = self.left.heightCount() if self.left else 0
+    rightHeight = self.right.heightCount() if self.right else 0
+    return  leftHeight + 1 if leftHeight > rightHeight else rightHeight + 1
 
   def is_balanced(self):
     childrenHeightisEqual = self.childrenHeightIsEqual()
