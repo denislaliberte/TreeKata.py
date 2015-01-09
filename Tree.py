@@ -42,10 +42,13 @@ class Tree:
     return (leftHeight > rightHeight and leftHeight + 1) or rightHeight + 1
 
   def is_balanced(self):
-    leftHeight = self.left.heightCount() if self.left else 0
-    rightHeight = self.right.heightCount() if self.right else 0
-    childrenHeightisEqual = ( abs(leftHeight - rightHeight) <= 1)
+    childrenHeightisEqual = self.childrenHeightIsEqual()
     leftBalanced = self.left.is_balanced() if self.left else True
     rightBalanced = self.right.is_balanced() if self.right else True
     return (childrenHeightisEqual and leftBalanced and rightBalanced)
+
+  def childrenHeightIsEqual(self):
+    leftHeight = self.left.heightCount() if self.left else 0
+    rightHeight = self.right.heightCount() if self.right else 0
+    return ( abs(leftHeight - rightHeight) <= 1)
 
