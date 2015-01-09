@@ -38,15 +38,12 @@ class Tree_test(unittest.TestCase):
   def test_2_level_of_children_tree(self):
     tree = Tree(10)
     tree.addMultiple([5,3,7,15,13,17])
-    #for value in [5,3,7,15,13,17]:
-    #  tree.add(value)
     self.assertEqual(tree.search(3).getValue(),3)
     self.assertEqual(tree.search(13).getValue(),13)
 
   def test_3_level_of_children_tree(self):
     tree = Tree(10)
-    for value in [5,3,7,15,13,17,1,4,6,8,11,14,16,19]:
-      tree.add(value)
+    tree.addMultiple([5,3,7,15,13,17,1,4,6,8,11,14,16,19])
     self.assertEqual(tree.search(10).getValue(),10)
     self.assertEqual(tree.search(13).getValue(),13)
     self.assertEqual(tree.search(1).getValue(),1)
@@ -58,25 +55,21 @@ class Tree_test(unittest.TestCase):
 
   def test_get_two_level_height(self):
     tree = Tree(10)
-    for value in [5]:
-      tree.add(value)
+    tree.add(5)
     self.assertEqual(tree.heightCount(),2)
 
   def test_get_right_height(self):
     tree = Tree(10)
-    for value in [11,13]:
-      tree.add(value)
+    tree.addMultiple([11,13])
     self.assertEqual(tree.heightCount(),3)
 
   def test_not_balanced(self):
     tree = Tree(10)
-    for value in [15,17,18]:
-      tree.add(value)
+    tree.addMultiple([15,17,18])
     self.assertFalse(tree.is_balanced())
 
   def test_balanced(self):
     tree = Tree(10)
-    for value in [5,15]:
-      tree.add(value)
+    tree.addMultiple([5,15])
     self.assertTrue(tree.is_balanced())
 
