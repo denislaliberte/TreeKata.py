@@ -44,11 +44,11 @@ class Tree_test(unittest.TestCase):
     tree = Tree(10)
     self.assertEqual(tree.heightCount(),1)
 
-  def pending_get_left_height(self):
+  def test_get_two_level_height(self):
     tree = Tree(10)
     for value in [5]:
       tree.add(value)
-    self.assetEqual(tree.heightCount(),2)
+    self.assertEqual(tree.heightCount(),2)
 
   def pending_get_left_height(self):
     tree = Tree(10)
