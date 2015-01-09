@@ -55,9 +55,9 @@ class Tree_test(unittest.TestCase):
     for value in [11,13]:
       tree.add(value)
     self.assertEqual(tree.heightCount(),3)
-  def pending_balanced(self):
+  def test_balanced(self):
     tree = Tree(10)
-    for value in [5,15,13,17,11]:
+    for value in [15,17,18]:
       tree.add(value)
     self.assertFalse(tree.is_balanced())
   def pending_balanced(self):
