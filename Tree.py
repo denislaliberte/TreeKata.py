@@ -22,6 +22,7 @@ class Tree:
       else:
         self.left = Tree(value)
 
+## todo not found case
   def search(self,value):
     if value > self.value:
       return self.right.search(value)
@@ -41,5 +42,14 @@ class Tree:
       return leftHeight + 1
     else:
       return rightHeight + 1
+
   def is_balanced(self):
-    return False
+    leftHeight =0
+    rightHeight =0
+    if self.left:
+      leftHeight = self.left.heightCount()
+    if self.right:
+      rightHeight = self.right.heightCount()
+    diff = abs(leftHeight - rightHeight)
+    return diff <= 1
+
